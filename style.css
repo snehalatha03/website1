@@ -1,0 +1,389 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+    text-decoration:none;
+    list-style: none;
+}
+html,body{
+    margin:0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body{
+    max-width: 100%;
+   
+    height: 100%;
+}
+nav{
+    background:#012a4a ;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+}
+ .logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float:right;
+    margin-right: 0 5px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.active{
+    background-color: orangered;
+    text-decoration: none;
+    
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color: black;
+    background:orangered;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+    margin-right: 40px;
+ 
+}
+#check{
+    display: none;
+}
+@media  (max-width:958px){
+    label.logo{
+        font-size:30px;
+        padding-left:50px;
+    }
+    nav ul li a{
+        font-size: 12px;
+        text-decoration: none;
+    }
+}
+@media (max-width:858px){
+   .checkbtn{
+       display: block;
+   }
+   ul{
+       position: fixed;
+       width: 100%;
+       height: 100vh;
+       background: #2c3e50;
+       top: 80px;
+       left: -100%;
+       text-align: center;
+       transition: all 0.5s;
+   }
+   nav ul li{
+       display: block;
+       margin: 50px 0;
+       line-height: 30px
+   }
+   nav ul li a{
+       font-size: 20px;
+       text-decoration: none;
+   }
+   a:hover,a.active{
+background: none;
+color: #0082e6;
+   }
+   #check:checked ~ ul{
+       left: 0;
+   }      
+  
+}
+@media (max-width:340px){
+    label.logo{
+        font-size: 20px;
+    }
+}
+.main{
+    background: url("https://cdn.pixabay.com/photo/2016/05/15/17/13/fountain-pen-1393979_960_720.jpg") no-repeat;
+background-size: cover;
+height: calc(100vh - 80px);
+background-attachment: fixed;
+margin-top: -20px;
+}
+.main .maintext{
+    width: 400px;
+    height: 400px;
+    
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+}
+.main .maintext h1{
+    text-align: center;
+    color: white;
+    font-size: 80px;
+}
+.container2{
+  width: 100%;
+  margin-top: 50px;
+}
+
+.container2 .cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    
+}
+.headings{
+    font-size: 3em;
+    text-align: center;
+    background-color: orangered;
+width: 250px;
+position: relative;
+left: 50%;
+right: 50%;
+transform: translate(-50%);
+color: white;
+
+}
+.headings::before{
+    content: "";
+    border: 10px solid black;
+    position: relative;
+
+}
+
+@media screen and (max-width:460px) {
+    .container2 h1{
+        font-size: 2em;
+        color: white;
+        width: 180px;
+    }
+}
+.cards .card{
+    margin: 40px;
+    cursor: pointer;
+}
+.cards img{
+    height: 200px;
+    
+}
+.cards .card:hover .image{
+    transform: scale(1.05);
+    width: 100%;
+    overflow: hidden;
+}
+.card .details{
+    display: block;
+   
+}
+.card .details .time h2{
+    font-size: 1.3em;
+   letter-spacing: 1.5px;
+}
+@media screen and (max-width:978px) {
+    .cards img{
+        width: 350px;
+    }
+}
+.container10{
+    background: url("https://images.pexels.com/photos/544115/pexels-photo-544115.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  height: 100vh;
+  top: 0px;
+  background-size: cover;
+margin-top: 0px;
+opacity: 0.5;
+}
+
+
+.container3{
+    width: 100%;
+    height: 18vh;
+    background-color:#012a49;
+  position: relative;
+}
+.slidetxt h1{
+    font-size: 70px;
+text-align: center;
+    color: black;
+    padding-top: 10px;
+    opacity: 1;
+   width: 50%;
+    animation: slide infinite 3s ;
+    border: 2px solid black;
+    position: relative;
+  left:50%;
+  top:50%;
+  transform: translate(-50%);
+  color: orangered;
+  
+}
+@keyframes slide {
+    0%{
+        top: 200px;
+    }
+    50%{
+        top: 100px;
+    }
+    100%{
+        top: 200px;
+    }
+}
+
+.container3 .icons {
+ position: absolute;
+ top: 50%;
+left: 50%;
+transform: translate(-50%);
+}
+.icons i{
+    font-size: 25px;
+    margin-left:10px ;
+    border: 2px solid black;
+    color:white;
+    border-radius:100%;
+    padding: 10px;
+    background-color: orangered;
+}
+.icons i:hover{
+    color: orangered;
+    background-color:white;
+}
+.container3 h1{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+@media screen and (max-width:576px) {
+    .container3 h1{
+        font-size: 12px;
+
+    }
+    .icons{
+        margin-top: -5px;
+    }
+    .icons i
+    {
+        font-size: 18px;
+    }
+}
+.container4{
+   margin-top: 60px;
+}
+.container4 .textblock{
+ padding: 50px ;
+   
+}
+.container4 .textblock p{
+    text-align: justify;
+    font-size: 25px;
+  
+}
+@media screen and (max-width:460px) {
+    .container4 h1{
+        font-size: 2em;
+        color: white;
+        width: 180px;
+    }
+}
+/*events*/
+.container5{
+    max-width: 100%;
+    margin-top: 62px;
+    position: relative;
+}
+.container5 .gallerygrid{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+    flex-wrap: wrap;
+   
+}
+.container5 .gallerygrid .eventimage img{
+    width: 350px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+    margin: 20px;
+    clip-path: circle(220px at left);
+ border: 2px solid black;
+ animation: show  2s ease-in-out;
+ 
+}
+.container5 .gallerygrid .eventimage img:hover {
+    clip-path: circle(100%);
+    transition: all 0.5s ease-in-out;
+    animation: show linear;
+}
+.container5 .gallerygrid .eventname {
+    position: absolute;
+    width: 100%;
+}
+
+.container5 .gallerygrid .eventname h1{
+  margin-left: 18px;
+    background-color:pink;
+    width: 350px;
+    height: 265px;
+    color: orangered;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+   cursor: pointer;
+} 
+.container5 .gallerygrid .eventname h1:hover{
+    z-index: 1;
+    justify-content: center;
+    box-shadow: 0 2px 5px 0 rgb(0, 0, 0,0.5);
+    transition: all 2s;
+}
+/*Team page*/
+section{
+
+.teamsection{
+   
+    width: 100%;
+    
+    height:100vh;
+}
+.teampictures{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.teampictures{
+    
+   
+
+}
+.teampictures div{
+    font-size: 30px;
+    background-color: red;
+}
+.teampictures img{
+    width: 300px;
+    height: 400px;
+    
+    background-color: red;
+}
