@@ -287,6 +287,7 @@ text-align: center;
     border-radius: 20px;
     margin: 20px;
     -webkit-clip-path: circle(220px at left);
+    clip-path:circle(220px at left);
  border: 2px solid black;
  animation: show  2s ease-in-out;
  padding: 2px;
@@ -294,6 +295,7 @@ text-align: center;
 }
 .container5 .gallerygrid .eventimage img:hover {
     -webkit-clip-path: circle(100%);
+    clip-path:circle(100%);
     transition: all 0.5s ease-in-out;
     animation: show linear;
 }
