@@ -286,14 +286,14 @@ text-align: center;
     position: relative;
     border-radius: 20px;
     margin: 20px;
-    clip-path: circle(220px at left);
+    -webkit-clip-path: circle(220px at left);
  border: 2px solid black;
  animation: show  2s ease-in-out;
  padding: 2px;
  
 }
 .container5 .gallerygrid .eventimage img:hover {
-    clip-path: circle(100%);
+    -webkit-clip-path: circle(100%);
     transition: all 0.5s ease-in-out;
     animation: show linear;
 }
