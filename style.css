@@ -14,14 +14,27 @@ html,body{
 }
 body{
     max-width: 100%;
-   
-    height: 100%;
+    height: 100vh;
 }
+@keyframes body {
+    0%{
+    position: relative;
+    top: -100%;
+    }
+    50%{
+        top: 0%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+
 nav{
     background:#012a4a ;
     height: 80px;
     width: 100%;
     z-index: 1;
+    position: fixed;
 }
  .logo{
     color: white;
@@ -71,7 +84,7 @@ nav ul li a:hover{
 #check{
     display: none;
 }
-@media  (max-width:958px){
+@media  (max-width:1200px){
     label.logo{
         font-size:30px;
         padding-left:50px;
@@ -81,19 +94,20 @@ nav ul li a:hover{
         text-decoration: none;
     }
 }
-@media (max-width:858px){
+@media (max-width:1020px){
    .checkbtn{
        display: block;
    }
    ul{
-       position: fixed;
+      position: fixed;
        width: 100%;
        height: 100vh;
        background: #2c3e50;
-       top: 80px;
+       top: 60px;
        left: -100%;
        text-align: center;
        transition: all 0.5s;
+       z-index: 1;
    }
    nav ul li{
        display: block;
@@ -101,7 +115,7 @@ nav ul li a:hover{
        line-height: 30px
    }
    nav ul li a{
-       font-size: 20px;
+       font-size: 17px;
        text-decoration: none;
    }
    a:hover,a.active{
@@ -119,37 +133,43 @@ color: #0082e6;
     }
 }
 .main{
-    background: url("https://cdn.pixabay.com/photo/2016/05/15/17/13/fountain-pen-1393979_960_720.jpg") no-repeat;
-background-size: cover;
-height: calc(100vh - 80px);
-background-attachment: fixed;
+background: url("https://cdn.pixabay.com/photo/2016/05/15/17/13/fountain-pen-1393979_960_720.jpg") no-repeat;
+background-size:cover;
+height: calc(100vh);
+background-attachment:fixed;
 margin-top: -20px;
+display: flex;
+justify-content:center;
+align-items: center;
+background-position: center;
 }
-.main .maintext{
-    width: 400px;
-    height: 400px;
-    
-    margin: 0 auto;
-    position: relative;
-    top: 100px;
-}
-.main .maintext h1{
+.main .text{
+    width: 100%;
     text-align: center;
     color: white;
-    font-size: 80px;
+    animation: body 3s ease-in-out;
+}
+.main .text h1{
+    font-size: 10rem;
+    font-weight: 900;
+    transform: scale(1);
+}
+@media screen and (max-width:758px) {
+    .main .text h1{
+        font-size: 5rem;
+    }
 }
 .container2{
   width: 100%;
-  margin-top: 50px;
+ 
 }
-
 .container2 .cards{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    animation: body 0.5s ease-in-out;
     padding-top: 50px;
-    
 }
 .headings{
     font-size: 3em;
@@ -183,8 +203,8 @@ color: white;
 }
 .cards img{
     height: 200px;
-    
-}
+    width: 100%;
+    }
 .cards .card:hover .image{
     transform: scale(1.05);
     width: 100%;
@@ -216,7 +236,7 @@ opacity: 0.5;
 .container3{
     width: 100%;
     height: 18vh;
-    background-color:#012a49;
+    background-color:#012a4a;
   position: relative;
 }
 .slidetxt h1{
@@ -246,7 +266,91 @@ text-align: center;
         top: 200px;
     }
 }
+/*events*/
+.container5{
+    max-width: 100%;
+  
+    position: relative;
+}
+.container5 .gallerygrid{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+    flex-wrap: wrap;
+   margin-top: 20px;
+}
+.container5 .gallerygrid .eventimage img{
+    width: 355px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+    margin: 20px;
+    clip-path: circle(220px at left);
+ border: 2px solid black;
+ animation: show  2s ease-in-out;
+ padding: 2px;
+ 
+}
+.container5 .gallerygrid .eventimage img:hover {
+    clip-path: circle(100%);
+    transition: all 0.5s ease-in-out;
+    animation: show linear;
+}
+.container5 .gallerygrid .eventname {
+    position: absolute;
+    width: 100%;
+}
 
+.container5 .gallerygrid .eventname h1{
+  margin-left: 18px;
+  background-color:orange;
+    width: 352px;
+    height: 265px;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+   cursor: pointer;
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 25px;
+  position: relative;
+  left: 5px;
+} 
+.container5 .gallerygrid .eventname h1:hover{
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px 0 rgb(0, 0, 0,0.5);
+   transition:all 1s linear;
+}
+@media screen and (max-width:390px){
+    .container5 .gallerygrid .eventname h1{
+        width: 300px;
+        position: relative;
+    
+        font-size: 15px;
+        text-overflow: hidden;
+    }
+    .container5 .gallerygrid .eventname img{
+        width: 300px;
+    }
+.container5 .gallerygrid{
+    position: relative;
+    left: 30px;
+    right: 50px;
+}
+.container5 .gallerygrid .eventname h1:hover{
+    font-size: 30px;
+ 
+}
+}
+.container3{
+   margin-top: 120px;
+}
 .container3 .icons {
  position: absolute;
  top: 50%;
@@ -303,87 +407,38 @@ transform: translate(-50%);
         width: 180px;
     }
 }
-/*events*/
-.container5{
-    max-width: 100%;
-    margin-top: 62px;
-    position: relative;
-}
-.container5 .gallerygrid{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 60px;
-    flex-wrap: wrap;
-   
-}
-.container5 .gallerygrid .eventimage img{
-    width: 350px;
-    cursor: pointer;
-    position: relative;
-    border-radius: 20px;
-    margin: 20px;
-    clip-path: circle(220px at left);
- border: 2px solid black;
- animation: show  2s ease-in-out;
- 
-}
-.container5 .gallerygrid .eventimage img:hover {
-    clip-path: circle(100%);
-    transition: all 0.5s ease-in-out;
-    animation: show linear;
-}
-.container5 .gallerygrid .eventname {
-    position: absolute;
-    width: 100%;
-}
 
-.container5 .gallerygrid .eventname h1{
-  margin-left: 18px;
-    background-color:pink;
-    width: 350px;
-    height: 265px;
-    color: orangered;
-    border-radius: 20px;
-    position: relative;
-    display: flex;
-    justify-content:flex-end;
-    align-items: center;
-   cursor: pointer;
-} 
-.container5 .gallerygrid .eventname h1:hover{
-    z-index: 1;
-    justify-content: center;
-    box-shadow: 0 2px 5px 0 rgb(0, 0, 0,0.5);
-    transition: all 2s;
-}
-/*Team page*/
-section{
+/*Team page
 
 .teamsection{
-   
-    width: 100%;
-    
-    height:100vh;
+   width: 100%;
+}
+.teamsection .teamhead{
+    text-align: center;
 }
 .teampictures{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.teampictures{
-    
-   
-
+    position: relative;
+    top: 100px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+    grid-gap:20px;
+ text-align: center;
+ margin: 10px;
+ padding: 20px;
 }
 .teampictures div{
     font-size: 30px;
-    background-color: red;
+    justify-content: center;
+    
+    align-items: center;
 }
 .teampictures img{
-    width: 300px;
+    width: 100%;
     height: 400px;
     
-    background-color: red;
 }
+@media screen and (max-width:958px) {
+    grip
+}
+*/
