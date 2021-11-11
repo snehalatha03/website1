@@ -30,11 +30,12 @@ body{
 }
 
 nav{
-    background:#012a4a ;
+   background-color:#012a4a ;
     height: 80px;
     width: 100%;
     z-index: 1;
     position: fixed;
+  
 }
  .logo{
     color: white;
@@ -331,14 +332,14 @@ text-align: center;
 }
 @media screen and (max-width:390px){
     .container5 .gallerygrid .eventname h1{
-        width: 300px;
+        width: 250px;
         position: relative;
     
         font-size: 15px;
         text-overflow: hidden;
     }
     .container5 .gallerygrid .eventname img{
-        width: 300px;
+        width: 250px;
     }
 .container5 .gallerygrid{
     position: relative;
@@ -409,38 +410,261 @@ transform: translate(-50%);
         width: 180px;
     }
 }
+/*articles page*/
+.articlemain{
+    width: 100%;
+    position: relative;
+    top: 80px;
+    max-height:100vh;
+    background: url("https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+   
+background-size:cover;
+height: calc(100vh);
+background-attachment:fixed;
 
-/*Team page
-
-.teamsection{
-   width: 100%;
+background-position: center;
+    z-index:0;
 }
-.teamsection .teamhead{
-    text-align: center;
+.overlay{
+    background:#3f52e3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.8;
+    height: 100vh;
+}
+.articlemain img{
+    width: 100vw;
+   max-height: 100vh;
+}
+.articlemain .intro h1,.articlemain .intro h2{
+    font-size: 100px;
+    color:white;
+    font-weight: 1200;
+    position: relative;
+    opacity: 1;
+   margin-left: 40px;
+    z-index: 2;
+    top:320px;
+   
+}
+.articlemain .intro h2{
+    font-size: 25px;
+}
+
+.articlemain .intro button{
+   font-size: 25px;
+   width: 200px;
+  height: 50px;
+  position: relative;
+    top: 330px;
+  z-index: 2;
+margin-left: 40px;
+color: white;
+background-color: #012a4a;
+border-style: none;
+border-radius: 10px;
+text-align: center;
+}
+
+.articlemain .intro button:hover{
+    box-shadow:0px 10px 15px 0px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width:648px) {
+    .articlemain .intro h1{
+        font-size: 60px;
+    }
+    
+.articlemain .intro button{
+    font-size:20px;
+}
+.articlemain .intro h2{
+    font-size: 18px;
+}
+.articlemain .intro button{
+    top:px;
+}
+}
+.container11{
+    width: 100%;
+  
+}
+
+.container11 .grids{
+    margin: 40px;
+    margin-top: 150px;
+    display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    
+    grid-gap:20px;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+}
+.container11 .grids .card1 img{
+    max-width: 100%;
+    height: 300px;
+}
+.card1 .details1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card1:hover img{
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px 0px grey;
+}
+.details1 .time{
+    width: 50%;
+}
+.details1 .time h2{
+    font-size: 20px;
+    color: gray;
+   margin-top: -10px;
+    line-height: 30px;
+   text-align: right;
+   padding: 10px;
+   align-self: flex-start;
+  
+}
+.details1 .caption{
+    color:black;
+    font-size: 20px;
+    text-align:justify;
+    padding: 10px;
+   width: 50%;
+}
+.details1 .caption a{
+ text-decoration: none; 
+ color: black; 
+}
+.details1 .caption a:hover{
+    color:#3f52e3;
+}
+/*team page*/
+.teamsection{
+   /* background-image: linear-gradient(
+    0deg, rgba(14,62,127,0.9), rgba(14,62,127,0.9)), url("https://images01.nicepage.com/c461c07a441a5d220e8feb1a/31a31b3afb7958688beeea7b/Untitled1.jpg");
+  /* background: url("https://images01.nicepage.com/c461c07a441a5d220e8feb1a/31a31b3afb7958688beeea7b/Untitled1.jpg");*/
+    position: relative;
+   top: 60px;
+    width: 100%;
+   background-size: cover;
+    bottom: 0px;
 }
 .teampictures{
-    position: relative;
-    top: 100px;
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 1fr;
-    grid-gap:20px;
- text-align: center;
- margin: 10px;
- padding: 20px;
-}
-.teampictures div{
-    font-size: 30px;
-    justify-content: center;
-    
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap:50px;
+    justify-content: space-around;
     align-items: center;
+    margin: 0px 100px 100px 100px;
+}
+#lead{
+  
+    position: relative;
 }
 .teampictures img{
     width: 100%;
     height: 400px;
+}
+@media screen and (max-width:860px) {
+    #lead{
+      position: relative;
+      grid-column: 1 / span 2;
+    }
+}
+.teamdetails{
+   padding: -20px;
+}
+.teamsection .teamhead h1{
+    font-size: 60px;
+    text-align: center;
+    padding: 50px;
+    color: black;
+    font-weight: 400;
+}
+.teamdetails{
+    background-color: white;
+    position:relative;
+    top: 0px;
+    border: 0.1px solid black;
+}
+.teamdetails h1,.teamdetails h2{
+    color: #0082e6;
+    text-align: center;
+    font-size: 25px;
+}
+.teamdetails h2{
+    color: black;
+}
+/*contact page*/
+#contact{
+
+    position:relative;
+    bottom: 0px;
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-business-technology-contact-address-hanging-decoration-technology-background-material-image_139405.jpg");
+   
+}
+.contactdetails{
+    /*display: flex;
+    justify-content: space-between;
+    align-items: center;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    max-width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid black;
+    background-color: white;
+  flex-wrap: nowrap;
+}
+.contactdetails h1,.contactdetails h2{
+    text-align: center;
+}
+.contactdetails i{
+    font-size: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 20px;
+    align-items: center;
+}
+#contact1{
+    text-align: center;
+    margin: 25px;
+}
+
+@media screen and (max-width:668px){
+    .contactdetails{
+        flex-direction: column;
+    }
     
+    .contactdetails h1,.contactdetails h2{
+        font-size:25px;
+    }
 }
-@media screen and (max-width:958px) {
-    grip
+@media screen and (max-width:948px){
+    .contactdetails h1{
+    }
 }
-*/
+@media screen and (max-width:360px) {
+    .contactdetails h1{
+       font-size:20px;
+    }
+    .contactdetails h2{
+        font-size: 16px;
+        text-align: center;
+    }
+}
+@media screen and (min-width:1320px) {
+    #contact{
+        height: 100vh;
+    }
+}
+#contactfooter{
+    margin-top: 80px;
+}
