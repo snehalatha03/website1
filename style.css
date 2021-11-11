@@ -288,16 +288,26 @@ text-align: center;
     border-radius: 20px;
     margin: 20px;
     -webkit-clip-path: circle(220px at left);
+<<<<<<< HEAD
     clip-path: circle(220px at left);
+=======
+    clip-path:circle(220px at left);
+>>>>>>> a1ffcc3568d43c3af31dd6015fb0df81c69d651b
  border: 2px solid black;
  -webkit-animation: show  2s ease-in-out;
  padding: 2px;
  
 }
 .container5 .gallerygrid .eventimage img:hover {
+<<<<<<< HEAD
     clip-path: circle(100%);
     -webkit-clip-path:circle(100%);
     -webkit-animation: all 0.5s ease-in-out;
+=======
+    -webkit-clip-path: circle(100%);
+    clip-path:circle(100%);
+    transition: all 0.5s ease-in-out;
+>>>>>>> a1ffcc3568d43c3af31dd6015fb0df81c69d651b
     animation: show linear;
 }
 .container5 .gallerygrid .eventname {
