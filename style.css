@@ -299,15 +299,9 @@ text-align: center;
  
 }
 .container5 .gallerygrid .eventimage img:hover {
-<<<<<<< HEAD
     clip-path: circle(100%);
     -webkit-clip-path:circle(100%);
     -webkit-animation: all 0.5s ease-in-out;
-=======
-    -webkit-clip-path: circle(100%);
-    clip-path:circle(100%);
-    transition: all 0.5s ease-in-out;
->>>>>>> a1ffcc3568d43c3af31dd6015fb0df81c69d651b
     animation: show linear;
 }
 .container5 .gallerygrid .eventname {
