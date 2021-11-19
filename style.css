@@ -180,7 +180,7 @@ background-position: center;
     padding: 70px;
 }
 .aboutusmain> div{
-    margin: 10px;
+    margin: 20px;
     position: relative;
     height: 400px;
 }
@@ -193,6 +193,7 @@ background-position: center;
     height: 450px;
     max-width: 350px;
     background-color: white;
+  
 }
 @media  screen and (max-width:449px) {
     .aboutusmain .textbox h1 {
@@ -244,7 +245,7 @@ background-position: center;
  width: 350px;
  margin: 20px;
 margin-left: 2px;
- margin-bottom: 3px;
+ margin-bottom: 5px;
  font-size: 18px;
 }
 .textbox h1{
@@ -544,7 +545,7 @@ animation-delay: 5s;
     font-weight: 1200;
     position: relative;
     opacity: 1;
-   margin-left: 40px;
+   margin-left: 30px;
     z-index: 2;
     top:320px;
 }
@@ -571,6 +572,7 @@ text-align: center;
 @media screen and (max-width:648px) {
     .articlemain .intro h1{
         font-size: 60px;
+        text-align: left;
     }
     
 .articlemain .intro button{
@@ -589,7 +591,10 @@ text-align: center;
   
 }
 .caption{
-    padding: 10px;
+    margin-left: 5px;
+}
+.caption h1{
+    text-align: justify;
 }
 .container11{
     width: 100%;
