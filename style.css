@@ -245,7 +245,11 @@ background-position: center;
  width: 350px;
  margin: 20px;
 margin-left: 2px;
+<<<<<<< HEAD
  margin-bottom: 5px;
+=======
+ margin-bottom: 10px;
+>>>>>>> 194a44b2a1d1a7813eff1c58e04e078240cfbfbc
  font-size: 18px;
 }
 .textbox h1{
