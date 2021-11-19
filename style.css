@@ -212,7 +212,7 @@ background-position: center;
         padding: 0px 40px;
     }
     .image12 p{
-        padding: 0px 40pxpx;
+        padding: 0px 40px;
     }
     .aboutusmain img{
         padding: 0px 40px;
@@ -441,7 +441,7 @@ transform: translate(-50%);
 }
 .eventimage img{
     max-width: 300px;
-    height: 400px;
+    height: 350px;
     padding: 10px;
   cursor: pointer;
 }
@@ -580,11 +580,15 @@ text-align: center;
     font-size: 14px;
 }
 }
-@media screen and (max-width:348px)
+@media screen and (max-width:448px)
 {
     .details1 .time {
         font-size: 12px;
     }
+  
+}
+.caption{
+    padding: 10px;
 }
 .container11{
     width: 100%;
@@ -716,9 +720,7 @@ text-align: center;
     background-color: white;
     position:relative;
     top: 0px;
- 
-
-}
+ }
 .teamdetails h1,.teamdetails h2{
     color: #0082e6;
     text-align: center;
@@ -841,7 +843,7 @@ text-align: center;
     visibility: visible;
 }
 @media screen and (max-width:448px) {
-    .page51name{
-        padding: 5px;
-    }
+  .page51img{
+      margin: 10px;
+  }
 }
