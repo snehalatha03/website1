@@ -207,6 +207,7 @@ background-position: center;
     .image12{
         position: relative;
         bottom: 20px;
+        margin-top: 20px;
     }
     .image12 h1{
         padding: 0px 40px;
