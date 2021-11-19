@@ -577,6 +577,7 @@ text-align: center;
 }
 .articlemain .intro h2{
     font-size: 16px;
+    font-size: 14px;
 }
 }
 @media screen and (max-width:348px)
