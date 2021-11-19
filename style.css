@@ -245,11 +245,7 @@ background-position: center;
  width: 350px;
  margin: 20px;
 margin-left: 2px;
-<<<<<<< HEAD
- margin-bottom: 5px;
-=======
  margin-bottom: 10px;
->>>>>>> 194a44b2a1d1a7813eff1c58e04e078240cfbfbc
  font-size: 18px;
 }
 .textbox h1{
@@ -592,17 +588,10 @@ text-align: center;
     .details1 .time {
         font-size: 12px;
     }
+
   
 }
-.caption{
-    margin-left: 5px;
-}
-.caption h1{
-    text-align: justify;
-}
-.container11{
-    width: 100%;
-}
+
 
 .container11 .grids{
      margin: 40px;
@@ -645,6 +634,34 @@ text-align: center;
     justify-content: center;
     flex-wrap: wrap;
 }
+@media  screen and (max-width:450px) {
+    .card1 .details1{
+        flex-direction: column;
+     justify-content: flex-start;
+        align-items: flex-start;
+      flex: 1;
+   
+    }
+    .details1 .time{
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    .details1 .time h2{
+        text-align: left;
+        line-height: 0px;
+        text-align: right;
+         padding: 0px;
+    }
+    .details1 .caption{
+        margin-top: -20px;
+    }
+   
+}
+@media screen and (min-width:452px) {
+    .details1 .caption{
+        width: 50%;
+    }
+}
 .card1:hover img{
    transform: scale(1.02);
     box-shadow: 0px 5px 10px 0px grey;
@@ -657,7 +674,7 @@ text-align: center;
 .details1 .time h2{
     font-size: 20px;
     color: gray;
-   margin-top: -10px;
+  margin-top: -10px;
     line-height: 30px;
   text-align: right;
    padding: 10px;
@@ -667,9 +684,9 @@ text-align: center;
     color:black;
     font-size: 20px;
     text-align:justify;
-    padding: 10px;
-   width: 50%;
-   text-wrap:wrap;
+ padding: 10px;
+   width: ;
+ 
 }
 .details1 .caption a{
  text-decoration: none; 
