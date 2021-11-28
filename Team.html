@@ -17,32 +17,38 @@
  </head>
 <body>
     <!--navbar start-->
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fa fa-bars"></i> 
-        </label>
-     
-        <label class="logo">Editorial</label>
-               <ul class="navsection">
-                   <li class="items "><a href="index.html">Home</a></li>
-                   <li class="items"><a href="articles.html">Articles</a></li>
-                    <li><a href="Team.html"  class="active">Editorial</a></li>
-                    <li><a href="rsm.html">RSM Team</a></li>
-                       
-                    </li>
-                    <li class="items"><a href="events.html">Events</a> </li>
-                   <li class="items"><a href="aboutus.html">About Us</a> </li>
-                   <li class="items"><a href="contact.html" >Contact</a></li>
-               </ul><a href=""></a>
-         </div>
-        </nav>
+
+    <header id="header" class="">
+        <div class="container101">
+            <div class="row1 sticky">
+               <div class="logo">
+                 <a href="#">Editorial</a>
+               </div>
+               <input type="checkbox" id="nav-check">
+               <label for="nav-check" class="nav-toggler">
+                  <span></span>
+               </label>
+               <nav class="nav">
+                  <ul>
+                     <li><a href="/website1/index.html">Home</a></li>
+                     <li><a href="aboutus.html">About</a></li>
+                     <li><a href="articles.html">Articles</a></li>
+                     <li><a href="Team.html">Editorial</a></li>
+                     <li><a href="/website1/yavin/index.html">RSM</a></li>
+                     <li><a href="events.html">Events</a></li>
+                     <li><a href="contact.html">Contact Us</a></li>
+                  </ul>
+               </nav>
+            </div>
+        </div>
+</header>
+   
     <!---End of navbar-->
 <section class="teamsection">
         <div class="teamhead">
             <h1>Our Team</h1>
         </div>
-     <div class="teampictures">
+    <div class="teampictures">
         <div id="lead">
             <img src="images/avatar.png" alt="">
             <div class="teamdetails">
@@ -76,13 +82,38 @@
     </div>
 </section>
 <footer>
-    <div class="container3">
-        <h1>Designed by Editorial Team | IEEE VBIT SB 2021</h1>
-        <div class="icons">
-           <a href="www.facebook.com"> <i class="fa fa-envelope"></i></a>
-          <a href="www.instagram.com"> <i class="fa fa-instagram"></i></a>
-          
-         </div>
+    <div class="content">
+      <div class="link-boxes">
+        <div class="box top link_name">
+            <div class="logo-details">
+                <span class="logo_name">Editorial</span>
+              </div>
+              <div class="media-icons">
+                <a href="#"><i class="fa fa-facebook-f"></i></a>
+              
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+              </div>
+              </div>
+        <ul class="box">
+          <li class="link_name">Company</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Events</a></li>
+        </ul>
+        <ul class="box">
+            <li class="link_name">What we do</li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+       
+        <ul class="box">
+          <li class="link_name">Get In touch</li>
+          <li><a href="#">IEEE VBIT</a></li>
+          <li><a href="#">Mail id</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 </body>
